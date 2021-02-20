@@ -145,3 +145,9 @@ module.exports = {
     }
 }
 ```
+
+# Wie stelle ich meinen Endpoint Online?
+Da das ganze System momentan in der Beta ist muss alles Manuell gemacht werden (von uns wie auch von euch)
+Als erstes geht ihr auf Github und Forkst unser [Repository](https://github.com/EvergeneIO/community-endpoints)
+
+Da Klonst du dann am besten das Repository auf deinen PC und kopierst deinen gerade erstellten Ordner in das Root verzeichniss, wenn du dann soweit bist Pusht du das ganze auf dein Geforktes Repository und erstellst einen Pull Request.
