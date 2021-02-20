@@ -12,14 +12,14 @@ npm init -y
 npm install express
 ```
 
-Als nächstes erstellen eine hauptdatei und benennen sie `app.js
+Als nächstes erstellen wir eine Hauptdatei und benennen sie `app.js
 
 in der `app.js` definieren wir nun alle Imports
 
 ```js
 const express = require('express');
 ```
-Dann müssen wir die App für Express definieren und der App einen Port geben
+Danach müssen wir die App für Express definieren und der App einen Port geben
 
 ```js
 const app = express();
@@ -36,23 +36,22 @@ app.get('/', async (req, res) => {
 
 Falls es dich mehr Interessiert gehe doch auf https://expressjs.com/de
 
-# Wie erstelle ich einen API endpunkt der Funktioniert?
+# Wie erstelle ich einen API Endpunkt der funktioniert?
 
-### Hier schauen wir uns an wie du eine Route erstellst das du einen Random output bekommst.
-Wir werden einfach einen Endpunkt erstellen wo du einen Random Output bekommen kannst.
+Hier schauen wir uns an wie du eine Route erstellst und einen zufälligen Output bekommst.
 
 Als erstes erstellen wir eine Datei mit den Möglichen Output’s
 
 ```json
 [
     {
-        "outpud": "Hi"
+        "output": "Hi"
     },
     {
-        "outpud": "Bye"
+        "output": "Bye"
     },
     {
-        "outpud": "OwO"
+        "output": "OwO"
     }
 ]
 ```
@@ -110,11 +109,11 @@ app.listen(3000, () => console.info(`Listening on port 3000`));
 Nun kannst du entweder immer die Route bearbeiten die du nun erstellt hast oder du kannst neue erstellen um weiter zu testen!
 
 # Wie erstelle ich einen Community Endpoint für Evergene
-Wenn du nun schon fleißig getestet hast wirst du Express langsam aber gut verstehen.
+Wenn du schon fleißig getestet hast wirst du Express langsam aber gut verstehen.
 
 Erstmal erstellst du einen Ordner in deinem Projekt und benennst ihn so wie dein Username, in diesem Beispiel heisst der Ordner `newt`
 
-In diesem Ordner erstellst du eine JavaScript datei und benennst sie so wie dein Endpunkt heisst, in diesem Beispiel nennen wir die Datei “random.js” da benutzt du am besten unser vorgefertigtes Template und fügst alles dort ein (link zum template)
+In diesem Ordner erstellst du eine JavaScript datei und benennst sie so wie dein Endpunkt heisst, in diesem Beispiel nennen wir die Datei `random.js`. Dafür benutzt du am besten unser vorgefertigtes [Template](https://github.com/EvergeneIO/community-endpoints/blob/main/template/template.js) und fügst alles dort ein.
 
 Die datei sollte nun wie folgt aussehen:
 ```js
@@ -128,12 +127,12 @@ module.exports = {
 Das System von uns ermöglicht es dir einen Ordner zu erstellen mit deinen Funktionen/Dateien etc der nicht für die API sichtbar ist
 
 Diesen Ordner erstellen wir nun, der Ordner muss `inv` heissen
-Nachdem du den Ordner erstellt hast kannst du dort deine “output.json” reinlegen.
-Nun müssen wir die output.json noch definieren, dies machen wir über dem “module.exports”
+Nachdem du den Ordner erstellt hast kannst du dort deine `output.json` reinlegen.
+Nun müssen wir die `output.json` noch definieren, dies machen wir über dem `module.exports`
 ```js
 const output = require('./path/to/output.json');
 ```
-Nun kannst von deiner Route die wir vorher erstellt haben kannst du nun den Inhalt kopieren und in `random.js` unter Execute einfügen
+Nun kannst von deiner Route, die wir vorher erstellt haben, den Inhalt kopieren und in `random.js` unter Execute einfügen
 
 Wenn du bis jetzt alles Richtig gemacht hast sieht der Code nun wie folgt aus:
 ```js
