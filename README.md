@@ -115,7 +115,7 @@ Nun kannst du entweder immer die Route bearbeiten die du nun erstellt hast oder 
 # Wie erstelle ich einen Community Endpoint für Evergene
 Wenn du nun schon fleißig getestet hast wirst du Express langsam aber gut verstehen.
 
-Erstmal erstellst du einen Ordner in deinem Projekt und benennst ihn so wie dein Username, in diesem Beispiel heisst der Ordner “newt”
+Erstmal erstellst du einen Ordner in deinem Projekt und benennst ihn so wie dein Username, in diesem Beispiel heisst der Ordner `newt`
 
 In diesem Ordner erstellst du eine JavaScript datei und benennst sie so wie dein Endpunkt heisst, in diesem Beispiel nennen wir die Datei “random.js” da benutzt du am besten unser vorgefertigtes Template und fügst alles dort ein (link zum template)
 
@@ -130,13 +130,13 @@ module.exports = {
 ```
 Das System von uns ermöglicht es dir einen Ordner zu erstellen mit deinen Funktionen/Dateien etc der nicht für die API sichtbar ist
 
-Diesen Ordner erstellen wir nun, der Ordner muss “inv” heissen
+Diesen Ordner erstellen wir nun, der Ordner muss `inv` heissen
 Nachdem du den Ordner erstellt hast kannst du dort deine “output.json” reinlegen.
 Nun müssen wir die output.json noch definieren, dies machen wir über dem “module.exports”
 ```js
 const output = require('./path/to/output.json');
 ```
-Nun kannst von deiner Route die wir vorher erstellt haben kannst du nun den Inhalt kopieren und in “random.js” unter Execute einfügen
+Nun kannst von deiner Route die wir vorher erstellt haben kannst du nun den Inhalt kopieren und in `random.js` unter Execute einfügen
 
 Wenn du bis jetzt alles Richtig gemacht hast sieht der Code nun wie folgt aus:
 ```js
