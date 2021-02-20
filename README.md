@@ -58,7 +58,7 @@ Als erstes erstellen wir eine Datei mit den Möglichen Output’s
 Nun definieren wir in der App über der Route die Datei
 
 ```js
-const outpud = require('./path/to/output.json');
+const output = require('./path/to/output.json');
 ```
 
 das sollte nun wie folgt aussehen:
