@@ -89,7 +89,7 @@ Als letztes verbessern wir noch den Output das der Browser auch weis das es JSON
 res.header("Content-Type", "application/json");
 ```
 
-Nun sind wir fertig, ich zeige dir noch das endergebnis
+Nun sind wir fertig, ich zeige dir noch das Endergebnis
 ```js
 const express = require('express');
 
@@ -113,7 +113,7 @@ Wenn du schon fleißig getestet hast wirst du Express langsam aber gut verstehen
 
 Erstmal erstellst du einen Ordner in deinem Projekt und benennst ihn so wie dein Username, in diesem Beispiel heisst der Ordner `newt`
 
-In diesem Ordner erstellst du eine JavaScript datei und benennst sie so wie dein Endpunkt heisst, in diesem Beispiel nennen wir die Datei `random.js`. Dafür benutzt du am besten unser vorgefertigtes [Template](https://github.com/EvergeneIO/community-endpoints/blob/main/template/template.js) und fügst alles dort ein.
+In diesem Ordner erstellst du eine JavaScript Datei und benennst sie so wie dein Endpunkt heisst, in diesem Beispiel nennen wir die Datei `random.js`. Dafür benutzt du am besten unser vorgefertigtes [Template](https://github.com/EvergeneIO/community-endpoints/blob/main/template/template.js) und fügst alles dort ein.
 
 Die datei sollte nun wie folgt aussehen:
 ```js
@@ -147,7 +147,7 @@ module.exports = {
 ```
 
 # Wie stelle ich meinen Endpoint Online?
-Da das ganze System momentan in der Beta ist muss alles Manuell gemacht werden (von uns wie auch von euch)
-Als erstes geht ihr auf Github und Forkst unser [Repository](https://github.com/EvergeneIO/community-endpoints)
+Da das ganze System momentan in der Beta ist muss alles manuell gemacht werden (von uns wie auch von euch).
+Als erstes gehst du auf Github und Forkst unser [Repository](https://github.com/EvergeneIO/community-endpoints)
 
 Da Klonst du dann am besten das Repository auf deinen PC und kopierst deinen gerade erstellten Ordner in das Root verzeichniss, wenn du dann soweit bist Pusht du das ganze auf dein Geforktes Repository und erstellst einen Pull Request.
