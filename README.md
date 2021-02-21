@@ -1,48 +1,48 @@
-# Hier wirst du lernen wie du eine Express App erstellst, wie du eine Route für die App erstellst und wie du einen Community Endpunkt erstellst.
+# Here you will learn how to create an Express App, how to create a route for the app and how to create a community endpoint.
 
-Da das ganze system noch in der Beta ist brauchst du momentan eine eigene Entwicklungsumgebung, die erstellen wir nun zusammen. Du kannst dir aber auch eine fertige bei uns herunterladen.
+Since the whole system is still in beta, you currently need your own development environment, which we will create together. You can also download one from us.
 
-# Wie erstelle ich eine Express App?
-Als erstes erstellen wir einen Project Ordner den wir `express-app` nennen!
+# How do I create an Express App?
+First we create a project folder which we call `express-app`!
 
 
-Dann müssen wir die App erstellen und danach noch express installieren
-```sh
+Then we need to create the app and then install express
+``sh
 npm init -y
 npm install express
 ```
 
-Als nächstes erstellen wir eine Hauptdatei und benennen sie `app.js`
+Next we create a main file and name it `app.js`.
 
-in der `app.js` definieren wir nun alle Imports
+in the `app.js` we now define all imports
 
-```js
+``js
 const express = require('express');
 ```
-Danach müssen wir die App für Express definieren und der App einen Port geben
+After that we have to define the app for express and give the app a port
 
-```js
+``js
 const app = express();
 
 app.listen(3000, () => console.info(`Listening on port 3000`));
 ```
 
-Nun können wir zwischen der App und dem Start der App unsere Route anlegen
+Now we can create our route between the app and the start of the app
 ```js
 app.get('/', async (req, res) => {
     res.send('hello world')
 });
 ```
 
-Falls es dich mehr Interessiert gehe doch auf https://expressjs.com/de
+If you are more interested go to https://expressjs.com/de
 
-# Wie erstelle ich einen API Endpunkt der funktioniert?
+# How do I create an API endpoint that works?
 
-Hier schauen wir uns an wie du eine Route erstellst und einen zufälligen Output bekommst.
+Here we look at how to create a route and get random output.
 
-Als erstes erstellen wir eine Datei mit den Möglichen Output’s
+First we create a file with the possible outputs
 
-```json
+``json
 [
     {
         "output": "Hi"
@@ -55,14 +55,14 @@ Als erstes erstellen wir eine Datei mit den Möglichen Output’s
     }
 ]
 ```
-Nun definieren wir in der App über der Route die Datei
+Now we define in the app above the route the file
 
-```js
+``js
 const output = require('./path/to/output.json');
 ```
 
-das sollte nun wie folgt aussehen:
-```js
+which should now look like this:
+``js
 const express = require('express');
 
 const app = express();
@@ -75,22 +75,22 @@ app.get('/', async (req, res) => {
 
 app.listen(3000, () => console.info(`Listening on port 3000`));
 ```
-Nun holen wir uns mit der Länge des Arrays der Datei einen Random output in der Route
-```js
+Now, using the length of the array of the file, we fetch a random output in the route
+``js
 app.get('/', async (req, res) => {
     let randomOutput = output[Math.floor(Math.random() * output.length)];
     res.send(randomOutput);
 });
 ```
 
-Als letztes verbessern wir noch den Output das der Browser auch weis das es JSON ist und setzen deswegen einen Header
+At last we improve the output so that the browser knows that it is JSON and set a header for it
 
-```js
+``js
 res.header("Content-Type", "application/json");
 ```
 
-Nun sind wir fertig, ich zeige dir noch das Endergebnis
-```js
+Now we are done, let me show you the final result
+``js
 const express = require('express');
 
 const app = express();
@@ -106,17 +106,17 @@ app.get('/', async (req, res) => {
 app.listen(3000, () => console.info(`Listening on port 3000`));
 ```
 
-Nun kannst du entweder immer die Route bearbeiten die du nun erstellt hast oder du kannst neue erstellen um weiter zu testen!
+Now you can either always edit the route you have now created or you can create new ones to test further!
 
-# Wie erstelle ich einen Community Endpoint für Evergene
-Wenn du schon fleißig getestet hast wirst du Express langsam aber gut verstehen.
+# How to create a community endpoint for Evergene
+If you have been testing diligently you will understand Express slowly but well.
 
-Erstmal erstellst du einen Ordner in deinem Projekt und benennst ihn so wie dein Username, in diesem Beispiel heisst der Ordner `newt`
+First you create a folder in your project and name it like your username, in this example the folder is called `newt`.
 
-In diesem Ordner erstellst du eine JavaScript Datei und benennst sie so wie dein Endpunkt heisst, in diesem Beispiel nennen wir die Datei `random.js`. Dafür benutzt du am besten unser vorgefertigtes [Template](https://github.com/EvergeneIO/community-endpoints/blob/main/template/template.js) und fügst alles dort ein.
+In this folder you create a JavaScript file and name it like your endpoint, in this example we call the file `random.js`. For this you best use our prefabricated [Template](https://github.com/EvergeneIO/community-endpoints/blob/main/template/template.js) and paste everything there.
 
-Die datei sollte nun wie folgt aussehen:
-```js
+The file should now look like this:
+``js
 module.exports = {
     execute: async (req, res, endpoint, tools) => {
         res.header("Content-Type", "application/json");
@@ -124,18 +124,18 @@ module.exports = {
     }
 }
 ```
-Das System von uns ermöglicht es dir einen Ordner zu erstellen mit deinen Funktionen/Dateien etc der nicht für die API sichtbar ist
+Our system allows you to create a folder with your functions/files etc that is not visible to the API.
 
-Diesen Ordner erstellen wir nun, der Ordner muss `inv` heissen
-Nachdem du den Ordner erstellt hast kannst du dort deine `output.json` reinlegen.
-Nun müssen wir die `output.json` noch definieren, dies machen wir über dem `module.exports`
-```js
+We create this folder now, the folder must be named `inv
+After you have created the folder you can put your `output.json` in it.
+Now we have to define the `output.json`, we do this above the `module.exports`.
+``js
 const output = require('./path/to/output.json');
 ```
-Nun kannst von deiner Route, die wir vorher erstellt haben, den Inhalt kopieren und in `random.js` unter Execute einfügen
+Now you can copy the content of the route we created before and paste it into `random.js` under Execute.
 
-Wenn du bis jetzt alles Richtig gemacht hast sieht der Code nun wie folgt aus:
-```js
+If you did everything right until now the code looks like this:
+``js
 const output = require('./inv/output.json');
 module.exports = {
     execute: async (req, res, endpoint, tools) => {
@@ -146,8 +146,5 @@ module.exports = {
 }
 ```
 
-# Wie stelle ich meinen Endpoint Online?
-Da das ganze System momentan in der Beta ist muss alles manuell gemacht werden (von uns wie auch von euch).
-Als erstes gehst du auf Github und Forkst unser [Repository](https://github.com/EvergeneIO/community-endpoints)
-
-Da Klonst du dann am besten das Repository auf deinen PC und kopierst deinen gerade erstellten Ordner in das Root verzeichniss, wenn du dann soweit bist Pusht du das ganze auf dein Geforktes Repository und erstellst einen Pull Request.
+# How do I put my endpoint online?
+Then you clone the repository on your PC and copy the folder you just created into the root directory, when you are ready you push the whole thing to your forked repository and create a pull request.
