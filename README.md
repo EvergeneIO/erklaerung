@@ -12,7 +12,7 @@ npm init -y
 npm install express
 ```
 
-Als nächstes erstellen wir eine Hauptdatei und benennen sie `app.js
+Als nächstes erstellen wir eine Hauptdatei und benennen sie `app.js`
 
 in der `app.js` definieren wir nun alle Imports
 
