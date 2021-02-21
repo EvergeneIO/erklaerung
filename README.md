@@ -7,7 +7,7 @@ First we create a project folder which we call `express-app`!
 
 
 Then we need to create the app and then install express
-``sh
+```sh
 npm init -y
 npm install express
 ```
