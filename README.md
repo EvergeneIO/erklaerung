@@ -2,7 +2,7 @@
 
 Da das ganze system noch in der Beta ist brauchst du momentan eine eigene Entwicklungsumgebung, die erstellen wir nun zusammen. Du kannst dir aber auch eine fertige bei uns herunterladen.
 
-# Wie erstelle eine Express App?
+# Wie erstelle ich eine Express App?
 Als erstes erstellen wir einen Project Ordner denn wir `express-app` nennen!
 
 
